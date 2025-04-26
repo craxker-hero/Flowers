@@ -47,6 +47,58 @@
       z-index: 10;
       --fl-speed: 0.8s;
     }
+    
+    /* Definición de animaciones faltantes */
+    @keyframes moving-flower-1 {
+      0%, 100% { transform: rotate(-5deg); }
+      50% { transform: rotate(5deg); }
+    }
+    
+    @keyframes moving-flower-2 {
+      0%, 100% { transform: rotate(30deg) rotateX(-5deg); }
+      50% { transform: rotate(30deg) rotateX(5deg); }
+    }
+    
+    @keyframes moving-flower-3 {
+      0%, 100% { transform: rotate(-15deg) rotateY(-5deg); }
+      50% { transform: rotate(-15deg) rotateY(5deg); }
+    }
+    
+@keyframes blooming-leaf-right {
+      0% { transform: rotate(70deg) rotateY(30deg) scale(0); }
+      100% { transform: rotate(70deg) rotateY(30deg) scale(1); }
+    }
+    
+    @keyframes blooming-leaf-left {
+      0% { transform: rotate(-70deg) rotateY(30deg) scale(0); }
+      100% { transform: rotate(-70deg) rotateY(30deg) scale(1); }
+    }
+    
+    @keyframes blooming-flower {
+      0% { opacity: 0; transform: scale(0.5); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+    
+    @keyframes grow-flower-tree {
+      0% { height: 0; opacity: 0; }
+      100% { height: 55vmin; opacity: 1; }
+    }
+    
+    @keyframes light-ans {
+      0%, 100% { opacity: 0.3; transform: scale(0.8); }
+      50% { opacity: 1; transform: scale(1.2); }
+    }
+    
+    @keyframes moving-grass {
+      0%, 100% { transform: rotate(-48deg) rotateY(40deg); }
+      50% { transform: rotate(-50deg) rotateY(40deg); }
+    }
+    
+    @keyframes moving-grass--2 {
+      0%, 100% { transform: scale(0.5) rotate(75deg) rotateX(10deg) rotateY(-200deg); }
+      50% { transform: scale(0.5) rotate(78deg) rotateX(10deg) rotateY(-200deg); }
+    }
+
     .flower--1 {
       animation: moving-flower-1 4s linear infinite;
     }
@@ -126,6 +178,7 @@
     .flower__leafs--3 {
       animation-delay: 1.7s;
     }
+
     .flower__leafs::after {
       content: "";
       position: absolute;
@@ -187,7 +240,8 @@
       width: 60%;
       height: 60%;
       border-radius: inherit;
-      background-image: repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(67.5deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(112.5deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(112.5deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(22.5deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(22.5deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(157.5deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(67.5deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(67.5deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), linear-gradient(90deg, #ffeb12, #ffce00);
+      background-image:
+repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(67.5deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(112.5deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(112.5deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(22.5deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(22.5deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(157.5deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(67.5deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(67.5deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 12px), linear-gradient(90deg, #ffeb12, #ffce00);
     }
     .flower__line {
       height: 55vmin;
@@ -629,13 +683,97 @@
       border-radius: 100% 0% 0% 100%/100% 100% 0% 0%;
       box-shadow: inset 0 2px 1vmin rgba(44, 238, 252, 0.2);
       background-image: linear-gradient(to bottom left, transparent, var(--dark-color)), linear-gradient(to bottom right, #159faa 50%, transparent 50%, transparent);
-      -webkit-mask-image: linear-gradient(to bottom right, #159faa 50%, transparent 50%, transparent);
-      mask-image: linear-
-      
-         @keyframes flower__g-fr-leaft-ans-7 {
+      mask-image: linear-gradient(to bottom right, #159faa 50%, transparent 50%, transparent);
+    }
+    
+    /* Estilos para la sección faltante */
+    .flower__g-fr {
+      position: absolute;
+      bottom: 5vmin;
+      left: 3vmin;
+      z-index: 90;
+      transform: rotate(-15deg) rotateY(20deg);
+      animation: flower__g-fr-ans 3s linear infinite;
+    }
+    
+    @keyframes flower__g-fr-ans {
+      0%, 100% { transform: rotate(-15deg) rotateY(20deg); }
+      50% { transform: rotate(-18deg) rotateY(25deg); }
+    }
+    
+    .flower__g-fr .leaf {
+      width: 25vmin;
+      height: 40vmin;
+      border-top-right-radius: 100%;
+      border-right: 2vmin solid #0a9da3;
+      background-image: linear-gradient(to bottom, transparent, var(--dark-color) 60%;
+    }
+    
+    .flower__g-fr__leaf {
+      position: absolute;
+      width: 8vmin;
+      height: 8vmin;
+      border-radius: 50% 0 50% 50%;
+      background-color: #0a9da3;
+      opacity: 0.7;
+      transform-origin: center;
+      animation: flower__g-fr-leaft-ans 3s linear infinite;
+    }
+    
+    @keyframes flower__g-fr-leaft-ans {
+      0%, 100% { transform: scale(1); opacity: 0.7; }
+      50% { transform: scale(1.1); opacity: 0.9; }
+    }
+    
+    .flower__g-fr__leaf--1 {
+      top: -5vmin;
+      left: 5vmin;
+      animation-delay: 0.2s;
+    }
+    
+    .flower__g-fr__leaf--2 {
+      top: -3vmin;
+      left: 8vmin;
+      animation-delay: 0.4s;
+    }
+    
+    .flower__g-fr__leaf--3 {
+      top: 0vmin;
+      left: 10vmin;
+      animation-delay: 0.6s;
+    }
+    
+    .flower__g-fr__leaf--4 {
+      top: 3vmin;
+      left: 12vmin;
+      animation-delay: 0.8s;
+    }
+    
+    .flower__g-fr__leaf--5 {
+      top: 6vmin;
+      left: 13vmin;
+      animation-delay: 1s;
+    }
+    
+    .flower__g-fr__leaf--6 {
+      top: 9vmin;
+      left: 14vmin;
+      animation-delay: 1.2s;
+    }
+    
+    .flower__g-fr__leaf--7 {
+      top: 12vmin;
+      left: 14vmin;
+      animation-delay: 1.4s;
+    }
+    
+    @keyframes flower__g-fr-leaft-ans-7 {
       0% {
         transform-origin: left;
         transform: rotate(45deg) scale(0);
+      }
+      100% {
+        transform: rotate(0) scale(1);
       }
     }
   </style>
